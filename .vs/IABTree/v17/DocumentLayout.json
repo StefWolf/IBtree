@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\stefane.orichuela.021\\IABTree\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\script\\npcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\npcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\script\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\script\\condition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\condition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\script\\sequence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\sequence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\script\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\script\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NPController.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\NPController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\NPController.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\NPController.cs",
+              "RelativeToolTip": "Assets\\Script\\NPController.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:22:55.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Condition.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Condition.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Condition.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Condition.cs",
+              "RelativeToolTip": "Assets\\Script\\Condition.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:15:21.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Action.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Action.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Action.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Action.cs",
+              "RelativeToolTip": "Assets\\Script\\Action.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:12:18.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NPC.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\NPC.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\NPC.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\NPC.cs",
+              "RelativeToolTip": "Assets\\Script\\NPC.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:08:11.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sequence.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Sequence.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Sequence.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Sequence.cs",
+              "RelativeToolTip": "Assets\\Script\\Sequence.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:05:22.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Task.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Task.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Task.cs",
+              "RelativeToolTip": "Assets\\Script\\Task.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:02:44.896Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
