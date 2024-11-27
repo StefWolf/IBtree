@@ -9,7 +9,7 @@ public enum TaskStatus
     FAILURE = 3
 }
 
-public abstract class Task : MonoBehaviour
+public abstract class Task
 {
     /// <summary>
     /// Executa a tarefa, retornando um dos possíveis status.
