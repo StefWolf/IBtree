@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\NPC.cs" />
     <Compile Include="Assets\Script\Action.cs" />
     <Compile Include="Assets\Script\Sequence.cs" />
+    <Compile Include="Assets\Script\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

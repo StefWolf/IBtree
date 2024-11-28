@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\npcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\script\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerMovement.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T13:17:35.204Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,14 +61,14 @@
               "RelativeDocumentMoniker": "Assets\\Script\\NPController.cs",
               "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\NPController.cs",
               "RelativeToolTip": "Assets\\Script\\NPController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowFcAAAAFAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAkwAwAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T20:22:55.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Condition.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Condition.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Condition.cs",
@@ -59,12 +76,11 @@
               "RelativeToolTip": "Assets\\Script\\Condition.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:15:21.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T20:15:21.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Action.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Action.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Action.cs",
@@ -72,12 +88,11 @@
               "RelativeToolTip": "Assets\\Script\\Action.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:12:18.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T20:12:18.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "NPC.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\NPC.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\NPC.cs",
@@ -85,12 +100,11 @@
               "RelativeToolTip": "Assets\\Script\\NPC.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:08:11.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T20:08:11.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Sequence.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Sequence.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Sequence.cs",
@@ -98,12 +112,11 @@
               "RelativeToolTip": "Assets\\Script\\Sequence.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:05:22.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T20:05:22.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Task.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Script\\Task.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Task.cs",
@@ -111,8 +124,7 @@
               "RelativeToolTip": "Assets\\Script\\Task.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:02:44.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T20:02:44.896Z"
             }
           ]
         }
