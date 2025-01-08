@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class NPController : MonoBehaviour
 {
-    public Transform topPoint; // Ponto superior do limite da patrulha
-    public Transform bottomPoint; // Ponto inferior do limite da patrulha
+    public Transform topPoint;
+    public Transform bottomPoint;
     public float speed = 2f; // Velocidade do inimigo
-    // Configurações do cone de visão
+    // Configuraï¿½ï¿½es do cone de visï¿½o
     public float visionDistance = 5f; // Alcance do cone
-    public float visionAngle = 45f;  // Ângulo do cone
-    public LayerMask playerLayer;  // Camada onde o jogador está
+    public float visionAngle = 45f;  // ï¿½ngulo do cone
+    public LayerMask playerLayer;  // Camada onde o jogador estï¿½
     public MeshFilter visionMeshFilter;
 
     private Mesh visionMesh;
-    private Vector3 targetPosition; // Próximo ponto para o inimigo ir
+    private Vector3 targetPosition; // Prï¿½ximo ponto para o inimigo ir
 
     private Sequence vigiarZona;
 
@@ -93,7 +93,7 @@ public class NPController : MonoBehaviour
 
     bool EstaNoPontoDeVisao(NPC npc)
     {
-        Debug.Log("Verificando se está no ponto de visão....");
+        Debug.Log("Verificando se estï¿½ no ponto de visï¿½o....");
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, visionDistance, playerLayer);
 
         foreach (var hit in hits)
@@ -120,7 +120,7 @@ public class NPController : MonoBehaviour
             float distancia = Vector3.Distance(transform.position, player.transform.position);
             return TaskStatus.SUCCESS;
         }
-        Debug.LogWarning("Player não encontrado!");
+        Debug.LogWarning("Player nï¿½o encontrado!");
         return TaskStatus.FAILURE;
     }
 
