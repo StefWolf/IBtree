@@ -19,7 +19,7 @@ O Script que define o ponto aleatório no mapa é "RandomTeleport".
 Segue abaixo algumas imagens do jogo: Level 1 e 2
 
 Level 1 com Árvore de Comportamento
-![level1](assets/NPCIBTREE.png)
+![level1](Assets/NPCIBTREE.png)
 
 Level 2 com Navegação Wander/Seek
-![level2](assets/NPWANDERSEEK.png.meta)
+![level2](Assets/NPWANDERSEEK.png.meta)
