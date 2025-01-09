@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     Transform endCanva;
     int chestCount = 0;
+    public int level;
 
     private void Start()
     {
@@ -23,10 +24,27 @@ public class GameController : MonoBehaviour
     public void SetChestCount()
     {
         chestCount++;
-        if(chestCount == 2)
+        if(level == 1)
         {
-            Victory();
+            if (chestCount == 2)
+            {
+               NextLevel();
+            }
         }
+
+        if (level == 2)
+        {
+            if (chestCount == 1)
+            {
+                Victory();
+            }
+        }
+        
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("SecondScene");
     }
 
     public void Victory()
