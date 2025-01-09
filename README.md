@@ -22,4 +22,4 @@ Level 1 com Árvore de Comportamento
 ![level1](Assets/NPCIBTREE.png)
 
 Level 2 com Navegação Wander/Seek
-![level2](Assets/NPWANDERSEEK.png.meta)
+![level2](Assets/NPWANDERSEEK.png)
