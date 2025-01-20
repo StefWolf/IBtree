@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\stefane.orichuela.021\\IABTree\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\scripts\\goap\\planner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goap\\planner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\goap\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goap\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\goap\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goap\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\goap\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goap\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\scripts\\goap\\pqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goap\\pqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\collectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\goap\\statecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goap\\statecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\scripts\\seekbehaviorwithphysics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|C:\\Users\\stefane.orichuela.021\\IABTree\\assets\\scripts\\seekbehaviorwithphysics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\seekbehaviorwithphysics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|c:\\users\\stefane.orichuela.021\\iabtree\\assets\\scripts\\collectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56F66AAB-2BF7-74C2-9C79-62F7A99B05C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CollectController.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\CollectController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectController.cs",
@@ -40,7 +64,84 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Planner.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\Planner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GOAP\\Planner.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\Planner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GOAP\\Planner.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAmwJcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T18:20:31.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PQueue.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\PQueue.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GOAP\\PQueue.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\PQueue.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GOAP\\PQueue.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwDAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T18:11:39.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Actions.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\Actions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GOAP\\Actions.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\Actions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GOAP\\Actions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T16:53:13.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Action.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\Action.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GOAP\\Action.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\Action.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GOAP\\Action.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T16:50:30.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StateController.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\StateController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GOAP\\StateController.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\StateController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GOAP\\StateController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T16:42:49.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "State.cs",
+              "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\State.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GOAP\\State.cs",
+              "ToolTip": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GOAP\\State.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GOAP\\State.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T16:33:15.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SeekBehaviorWithPhysics.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\SeekBehaviorWithPhysics.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SeekBehaviorWithPhysics.cs",
@@ -48,12 +149,11 @@
               "RelativeToolTip": "Assets\\Scripts\\SeekBehaviorWithPhysics.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAwwE0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T21:18:45.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T21:18:45.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "GameController.cs",
               "DocumentMoniker": "C:\\Users\\stefane.orichuela.021\\IABTree\\Assets\\Scripts\\GameController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameController.cs",
@@ -61,8 +161,7 @@
               "RelativeToolTip": "Assets\\Scripts\\GameController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T21:11:10.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T21:11:10.037Z"
             }
           ]
         }
