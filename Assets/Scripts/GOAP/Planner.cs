@@ -226,10 +226,10 @@ namespace GOAP
                         var prevState = Previous(action, currNode.State);
                         if (closed.All(n => !Match(n.State, prevState)))
                         {
-                            var prevNode = queue.Find(node => Match(node.State, prevState)) ?? new Node(prevState); //ERROR
-                            if (!queue.Contains(prevNode)) queue.Push(prevNode);
+                            //var prevNode = queue.Find(node => Match(node.State, prevState)) ?? new Node(prevState); //ERROR
+                            //if (!queue.Contains(prevNode)) queue.Push(prevNode);
 
-                            var gCost = currNode.GCost + action.Cost;
+                            /*var gCost = currNode.GCost + action.Cost;
                             var hCost = Distance(prevState, initial);
 
                             if (gCost + hCost < FCost(prevNode))
@@ -237,7 +237,7 @@ namespace GOAP
                                 prevNode.GCost = gCost;
                                 prevNode.HCost = hCost;
                                 prevNode.From = new Edge(action, currNode, prevNode);
-                            }
+                            }*/
                         }
                     }
                 }
