@@ -63,6 +63,8 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\Minimax.cs" />
+    <Compile Include="Assets\Scripts\NPCController.cs" />
     <Compile Include="Assets\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
     <Compile Include="Assets\Scripts\Condition.cs" />
     <Compile Include="Assets\Scripts\GOAP\PQueue.cs" />
@@ -72,11 +74,11 @@
     <Compile Include="Assets\Scripts\GOAP\State.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Action.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Scripts\GOAP\Action.cs" />
     <Compile Include="Assets\Scripts\AStar.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\InteractionController.cs" />
     <Compile Include="Assets\Scripts\NPController.cs" />
     <Compile Include="Assets\Scripts\RandomTeleport.cs" />

@@ -8,6 +8,7 @@ public class NPController : MonoBehaviour
     public Transform topPoint;
     public Transform bottomPoint;
     public float speed = 2f; // Velocidade do inimigo
+
     // Configura��es do cone de vis�o
     public float visionDistance = 5f; // Alcance do cone
     public float visionAngle = 45f;  // �ngulo do cone
@@ -27,6 +28,7 @@ public class NPController : MonoBehaviour
     {
         GerarArvoreDeComportamento();
         targetPosition = topPoint.position;
+
         visionMesh = new Mesh();
         GetComponent<MeshFilter>().mesh = visionMesh;
         DrawVisionCone();
@@ -34,14 +36,11 @@ public class NPController : MonoBehaviour
 
     void Update()
     {
-        //DrawVisionCone();
-
         if (vigiarZona.Execute(npc) == TaskStatus.SUCCESS)
         {
             if (perseguirPlayer.Execute(npc) == TaskStatus.SUCCESS)
             {
                 FindFirstObjectByType<GameController>().GameOver();
-                Debug.Log("--- GAME OVER ---");
             }
         }
     }
@@ -147,6 +146,10 @@ public class NPController : MonoBehaviour
             {
                 Debug.Log("Inimigo chegou no jogador!");
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
         return false;

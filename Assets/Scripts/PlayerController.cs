@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // Velocidade de movimento
     private Rigidbody2D rb;
+    public int life = 100;
     private Vector2 movement;
 
     void Start()
