@@ -24,10 +24,14 @@ Level 1 com Árvore de Comportamento
 Level 2 com Navegação Wander/Seek
 ![level2](Assets/NPWANDERSEEK.png)
 
-# Tomadas de Decisão e Melhor Caminho
+# Minimax e A*
 Para a terceira fase do jogo, utilizamos o algoritmo Minimax, utilizado para a tomada de decisões do NPC, associado ao algoritmo A*, utilizado para a escolha do melhor caminho para o destino escolhido com a tomada de decisão.
 A Heuristica utilizada no algoritmo A* foi a Distancia de Manhattan:
 ```
-A Distância de Manhattan, também conhecida como distância L1 ou distância de bloco, é uma métrica utilizada em estatística e ciência de dados para medir a distância entre dois pontos em um espaço multidimensional. Essa métrica é chamada assim em referência à grade de ruas de Manhattan, onde a distância entre dois pontos é calculada apenas ao longo dos eixos, em vez de uma linha reta. A fórmula para calcular a Distância de Manhattan entre dois pontos (x1, y1) e (x2, y2) é dada por |x1 – x2| + |y1 – y2|.
+A Distância de Manhattan, também conhecida como distância L1 ou distância de bloco, é uma métrica
+utilizada em estatística e ciência de dados para medir a distância entre dois pontos em um espaço
+multidimensional. Essa métrica é chamada assim em referência à grade de ruas de Manhattan, onde a
+distância entre dois pontos é calculada apenas ao longo dos eixos, em vez de uma linha reta. A fórmula
+para calcular a Distância de Manhattan entre dois pontos (x1, y1) e (x2, y2) é dada por |x1 – x2| + |y1 – y2|.
 ```
-E as condições
+E as estrategias para a melhor escolha no Minimax foram:
