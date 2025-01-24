@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -17,7 +18,7 @@ public class NPCController : MonoBehaviour
     public Transform player; // Referência ao jogador
 
     public float alcanceVisao = 6f; // Distância máxima para perceber o jogador
-    public float velocidade = 5f; // Velocidade de movimento
+    public float velocidade = 4f; // Velocidade de movimento
     public LayerMask playerLayer;  // Camada onde o jogador est�
     public float visionAngle = 45f;  // �ngulo do cone
 
@@ -27,6 +28,8 @@ public class NPCController : MonoBehaviour
     private Vector3 velocity;
 
     public State estadoAtual = State.Patrulhando;
+    List<Vector3> betterPath;
+    int count = 0;
     public int life = 100;
     private int currentPointIndex = 0; // Índice do ponto de patrulha atual
 
@@ -50,12 +53,28 @@ public class NPCController : MonoBehaviour
         return State.Atacando;
     }
 
+    public List<Vector3> FindNeighboursPoints(Vector3 currentPoint)
+    {
+        List<Vector3> neighbours = new List<Vector3>();
+        foreach (Transform point in patrolPoints)
+        {
+            if (point.position != currentPoint)
+                neighbours.Add(point.position);
+        }
+        return neighbours;
+    }
+
 
     private void Update()
     {
-        State bestMove = GetComponent<Minimax>().MinimaxExecute();
-        estadoAtual = bestMove;
-
+        if (Vector3.Distance(transform.position, player.position) <= alcanceVisao)
+        {
+            State bestMove = GetComponent<Minimax>().MinimaxExecute();
+            estadoAtual = bestMove;
+        }
+        else
+            estadoAtual = State.Patrulhando;
+        
         switch (estadoAtual)
         {
             case State.Patrulhando:
@@ -79,12 +98,24 @@ public class NPCController : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, patrolPoints[currentPointIndex].position) < 1f)
         {
+            count = 0;
             currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
-            Vector3 targetPosition = GetComponent<AStar>().AStarAlgorithm(transform.position, patrolPoints[currentPointIndex].position)[1];
-            Seek(targetPosition);
+            betterPath = GetComponent<AStar>().AStarAlgorithm(transform.position, patrolPoints[currentPointIndex].position);
+            Seek(betterPath[count]);
         }
         else
-            Seek(patrolPoints[currentPointIndex].position);
+        {
+            if(betterPath != null)
+            {
+                if(Vector3.Distance(transform.position, betterPath[count]) < 0.5f)
+                {
+                    count++;
+                }else
+                    Seek(betterPath[count]);
+            }
+            else 
+                Seek(patrolPoints[currentPointIndex].position);
+        }
     }
 
     public void PerseguirPlayer()

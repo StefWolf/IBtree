@@ -6064,7 +6064,7 @@ MonoBehaviour:
   - {fileID: 416867827}
   player: {fileID: 813069983}
   alcanceVisao: 6
-  velocidade: 5
+  velocidade: 4
   playerLayer:
     serializedVersion: 2
     m_Bits: 8

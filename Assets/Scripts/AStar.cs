@@ -26,14 +26,8 @@ public class AStar: MonoBehaviour
 
     private List<Vector3> GetNeighbours(Vector3 nodePosition)
     {
-        // Retorna os pontos vizinhos
-        return new List<Vector3>
-        {
-            nodePosition + Vector3.forward,
-            nodePosition + Vector3.back,
-            nodePosition + Vector3.left,
-            nodePosition + Vector3.right
-        };
+
+        return FindFirstObjectByType<NPCController>().FindNeighboursPoints(nodePosition);
     }
 
     private float CalculateManhattanDistance(Vector3 a, Vector3 b)

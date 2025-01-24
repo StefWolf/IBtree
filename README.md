@@ -35,6 +35,4 @@ distância entre dois pontos é calculada apenas ao longo dos eixos, em vez de u
 para calcular a Distância de Manhattan entre dois pontos (x1, y1) e (x2, y2) é dada por |x1 – x2| + |y1 – y2|.
 ```
 E as estrategias para a melhor escolha no Minimax foram:
-![Minimax1](Assets/Captura%20de%20tela%202025-01-24%20000817.png)
-
-![Minimax2](Assets/Captura%20de%20tela%202025-01-24%20000919.png)
+![Minimax1](Assets/Captura%20de%20tela%202025-01-24%20020928.png)
