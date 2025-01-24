@@ -71,7 +71,6 @@ public class AStar: MonoBehaviour
                     path.Add(currentNode.position);
                     currentNode = currentNode.parent;
                 }
-
                 path.Reverse();
                 return path;
             }

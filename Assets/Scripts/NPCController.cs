@@ -80,7 +80,8 @@ public class NPCController : MonoBehaviour
         if (Vector3.Distance(transform.position, patrolPoints[currentPointIndex].position) < 1f)
         {
             currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
-            Seek(patrolPoints[currentPointIndex].position);
+            Vector3 targetPosition = GetComponent<AStar>().AStarAlgorithm(transform.position, patrolPoints[currentPointIndex].position)[1];
+            Seek(targetPosition);
         }
         else
             Seek(patrolPoints[currentPointIndex].position);
