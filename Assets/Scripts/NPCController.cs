@@ -1,6 +1,7 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class NPCController : MonoBehaviour
 {
@@ -8,79 +9,120 @@ public class NPCController : MonoBehaviour
     {
         Patrulhando,
         Perseguindo,
+        Atacando,
         Retornando
     }
 
-    public Transform[] pontosDePatrulha; // Lista de pontos para patrulha
-    private int targetIndex = 0; // Õndice do alvo atual
-    public Transform player; // ReferÍncia ao jogador
+    public Transform[] patrolPoints; // Lista de pontos para patrulha
+    public Transform player; // Refer√™ncia ao jogador
 
-    public float alcanceVisao = 10f; // Dist‚ncia m·xima para perceber o jogador
-    public float velocidade = 3f; // Velocidade de movimento
+    public float alcanceVisao = 6f; // Dist√¢ncia m√°xima para perceber o jogador
+    public float velocidade = 5f; // Velocidade de movimento
+    public LayerMask playerLayer;  // Camada onde o jogador estÔøΩ
+    public float visionAngle = 45f;  // ÔøΩngulo do cone
+
+    public float maxAcceleration = 10f;
+    public float mass = 1f;
+    public float stopDistance = 1f;
+    private Vector3 velocity;
 
     public State estadoAtual = State.Patrulhando;
     public int life = 100;
-    private float menorDistancia = 99999f;
-    private int pontoAtualIndex = 0; // Õndice do ponto de patrulha atual
+    private int currentPointIndex = 0; // √çndice do ponto de patrulha atual
 
-    public List<Vector2> FindNeighboursPoints(Vector2 currentPoint)
+
+    public State StatePatrulhando()
     {
-        List<Vector2> neighbours = new List<Vector2>();
-        foreach(Transform point in pontosDePatrulha)
-        {
-            if((Vector2)point.position != currentPoint)
-                neighbours.Add(point.position);
-        }
-        return neighbours;
+        return State.Patrulhando;
     }
+
+    public State StatePerseguindo()
+    {
+        return State.Perseguindo;
+    }
+
+    public State StateRetornando()
+    {
+        return State.Retornando;
+    }
+    public State StateAtacando()
+    {
+        return State.Atacando;
+    }
+
+
+    private void Update()
+    {
+        State bestMove = GetComponent<Minimax>().MinimaxExecute();
+        estadoAtual = bestMove;
+
+        switch (estadoAtual)
+        {
+            case State.Patrulhando:
+                Patrulhar();
+                break;
+            case State.Perseguindo:
+                PerseguirPlayer();
+                break;
+            case State.Atacando:
+                AtacarPlayer();
+                break;
+            case State.Retornando:
+                RetornarAOPontoDePatrulha();
+                break;
+            default: 
+                break;
+        }
+    }
+
     public void Patrulhar()
     {
-        for(int ii=0; ii < pontosDePatrulha.Length; ii++)
+        if (Vector3.Distance(transform.position, patrolPoints[currentPointIndex].position) < 1f)
         {
-            if (Vector2.Distance(pontosDePatrulha[ii].position, player.position) < menorDistancia)
-            {
-                menorDistancia = Vector2.Distance(pontosDePatrulha[ii].position, player.position);
-                targetIndex = ii;
-            }
+            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
+            Seek(patrolPoints[currentPointIndex].position);
         }
-        // envia o ponto de patrulha mais perto do player para ser o objetivo do NPC, retornando a lista de pontos atÈ esse ponto
-        List<Vector2> path = FindFirstObjectByType<AStar>().AStarAlgorithm(transform.position, pontosDePatrulha[targetIndex].position);
-        
-        if (Vector3.Distance(transform.position, path[pontoAtualIndex]) < 0.5f) // caso tenha chegado no ponto de patrulha, vai para outro
-            pontoAtualIndex++;
         else
-            MoverEmDirecao(path[pontoAtualIndex]); // move-se em direÁ„o ao ponto de patrulha atual
-
-        // muda o estado para perseguir caso o player esteja no raio de vis„o
-        if (Vector3.Distance(transform.position, player.position) <= alcanceVisao)
-        {
-            estadoAtual = State.Perseguindo;
-        }
+            Seek(patrolPoints[currentPointIndex].position);
     }
 
-    public void PerseguirJogador()
+    public void PerseguirPlayer()
     {
-        MoverEmDirecao(player.position);
+        Seek(player.position);
+    }
 
-        if (Vector3.Distance(transform.position, player.position) > alcanceVisao)
-        {
-            estadoAtual = State.Retornando;
-        }
+    public void AtacarPlayer()
+    {
+        player.GetComponent<PlayerController>().life -= 5;
     }
 
     public void RetornarAOPontoDePatrulha()
     {
-        MoverEmDirecao(pontosDePatrulha[pontoAtualIndex].position);
+        Seek(patrolPoints[currentPointIndex].position);
+    }
 
-        if (Vector3.Distance(transform.position, pontosDePatrulha[pontoAtualIndex].position) < 0.5f)
+    private void Seek(Vector3 target)
+    {
+        if (target == null)
+            return;
+
+        Vector3 desiredVelocity = (target - transform.position).normalized * velocidade;
+
+        Vector3 steering = (desiredVelocity - velocity) / mass;
+
+        steering = Vector3.ClampMagnitude(steering, maxAcceleration);
+
+        velocity += steering * Time.deltaTime;
+
+        velocity = Vector3.ClampMagnitude(velocity, velocidade);
+
+        transform.position += velocity * Time.deltaTime;
+
+        if (Vector3.Distance(transform.position, target) > stopDistance)
         {
-            estadoAtual = State.Patrulhando;
+            float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
 
-    public void MoverEmDirecao(Vector3 destino)
-    {
-        Vector3 direcao = (destino - transform.position).normalized;
-        transform.position += direcao * velocidade * Time.deltaTime;
-    }
 }

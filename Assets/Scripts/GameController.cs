@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
-        endCanva = FindFirstObjectByType<PlayerMovement>().gameObject.transform.GetChild(1).GetChild(2);
+        endCanva = FindFirstObjectByType<PlayerController>().gameObject.transform.GetChild(1).GetChild(2);
     }
     public void GameOver()
     {
@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     public void SetChestCount()
     {
         chestCount++;
-        if(level == 1)
+        if(level == 1 || level == 2)
         {
             if (chestCount == 2)
             {
@@ -32,9 +32,9 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if (level == 2)
+        if (level == 3)
         {
-            if (chestCount == 1)
+            if (chestCount == 2)
             {
                 Victory();
             }

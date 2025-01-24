@@ -2,23 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Minimax : NPCController
+public class Minimax : MonoBehaviour
 {
-    //public Transform[] pontosDePatrulha; // Lista de pontos para patrulha
-    private int pontoAtualIndex = 0;
-    public Transform player;
-    //public float alcanceVisao = 10f;
-    //public float velocidade = 3f;
+    public float distanciaPerseguir = 5f;
+    public float distanciaPatrulhar = 10f;
 
-    public float distanciaPerseguir = 6f;
-    public float distanciaPatrulhar = 12f;
-
-    //private State estadoAtual = State.Patrulhando;
-
-    void Update()
+    public NPCController.State MinimaxExecute()
     {
         int melhorAção = MinimaxAlgorithm();
-        ExecutarAção(melhorAção);
+        return ExecutarAção(melhorAção);
     }
 
     // Função Minimax para decidir a melhor ação
@@ -27,66 +19,84 @@ public class Minimax : NPCController
         // Definir os estados possíveis e suas avaliações
         // 0 = Patrulhando, 1 = Perseguindo, 2 = Retornando
 
-        int pontuacaoPatrulhando = AvaliarEstado(State.Patrulhando);
-        int pontuacaoPerseguindo = AvaliarEstado(State.Perseguindo);
-        int pontuacaoRetornando = AvaliarEstado(State.Retornando);
+        int pontuacaoPatrulhando = AvaliarEstado(GetComponent<NPCController>().StatePatrulhando());
+        int pontuacaoPerseguindo = AvaliarEstado(GetComponent<NPCController>().StatePerseguindo());
+        int pontuacaoRetornando = AvaliarEstado(GetComponent<NPCController>().StateRetornando());
+        int pontuaçãoAtacando = AvaliarEstado(GetComponent<NPCController>().StateAtacando());
 
         // Decidir qual ação tem a melhor pontuação
-        if (pontuacaoPerseguindo >= pontuacaoPatrulhando && pontuacaoPerseguindo >= pontuacaoRetornando)
+        if (pontuacaoPerseguindo >= pontuacaoPatrulhando && pontuacaoPerseguindo >= pontuacaoRetornando && pontuacaoPerseguindo >= pontuaçãoAtacando)
             return 1; // Perseguir
-        else if (pontuacaoRetornando >= pontuacaoPatrulhando && pontuacaoRetornando >= pontuacaoPerseguindo)
-            return 2; // Retornar
+        else if (pontuacaoRetornando >= pontuacaoPatrulhando && pontuacaoRetornando >= pontuacaoPerseguindo && pontuacaoRetornando >= pontuaçãoAtacando)
+            return 3; // Retornar
+        else if(pontuaçãoAtacando >= pontuacaoPatrulhando && pontuaçãoAtacando >= pontuacaoPerseguindo && pontuaçãoAtacando >= pontuacaoRetornando)
+            return 2;
         else
             return 0; // Patrulhar
     }
 
     // Função para avaliar o estado com base em algumas condições
-    private int AvaliarEstado(State estado)
+    private int AvaliarEstado(NPCController.State estado)
     {
         switch (estado)
         {
-            case State.Patrulhando:
-                if (Vector2.Distance(transform.position, player.position) >= distanciaPatrulhar)
+            case NPCController.State.Patrulhando:
+                if (Vector2.Distance(transform.position, GetComponent<NPCController>().player.position) > distanciaPerseguir)
                     return 10; // player está longe, pode patrulhar em segurança
-                else if (Vector2.Distance(transform.position, player.position) <= distanciaPerseguir && life >= 70)
-                    return 5; // player proximo a você e você tá com a vida boa, patrulhar pode ser perigoso
+                else if (Vector2.Distance(transform.position, GetComponent<NPCController>().player.position) <= distanciaPerseguir && GetComponent<NPCController>().life >= 50)
+                    return 5; // player proximo a você, mas você tá com a vida boa. Patrulhar pode ser perigoso mas sem risco de morte alto ainda
                 else
-                    return 0; // player está proximo a você e você está com a vida baixa, não é uma boa patrulhar
-            case State.Perseguindo:
-                if (life > 60 && player.GetComponent<PlayerController>().life < 30) // vida boa, player com vida baixa
-                    return 10;
-                else if (life == player.GetComponent<PlayerController>().life) // equilibrado
-                    return 5;
-                else if (life < 30 && player.GetComponent<PlayerController>().life > 70) // player com vida boa, você com vida muito baixa
-                    return 0;
+                    return 0; // player está proximo a você e você está com a vida baixa, não é uma boa patrulhar, alto risco de morte
+            case NPCController.State.Perseguindo:
+                if (Vector2.Distance(transform.position, GetComponent<NPCController>().player.position) <= distanciaPerseguir)
+                { // player perto de você
+                    if (GetComponent<NPCController>().life > 60 && GetComponent<NPCController>().player.GetComponent<PlayerController>().life < 30)
+                        return 10; // você tá com a vida boa e o player com a vida baixa. Boa ideia persegui-lo
+                    else if (GetComponent<NPCController>().life == GetComponent<NPCController>().player.GetComponent<PlayerController>().life) // equilibrado
+                        return 5;
+                    else if (GetComponent<NPCController>().life < 30 && GetComponent<NPCController>().player.GetComponent<PlayerController>().life > 70)
+                        return 0; // player com a vida alta e você com a vida baixa. Não é uma boa persegui-lo agora
+                    else
+                        return -1;
+                }
                 else
-                    return 0;
-            case State.Retornando:
-                if (life <= 30) // vida muito baixa, melhor voltar para se recuperar
+                    return -1; // player está fora de alcance para você persegui-lo
+            case NPCController.State.Retornando:
+                if (GetComponent<NPCController>().life < 30) // vida muito baixa, melhor voltar para se recuperar
                     return 10;
-                else if (life > 30 && life <= 50) // pode ser uma boa voltar para se recuperar
+                else if (GetComponent<NPCController>().life > 30 && GetComponent<NPCController>().life <= 50) // pode ser uma boa voltar para se recuperar, mas não é urgente
                     return 5;
                 else // > 50
                     return 0; // a vida tá boa, não tem por que retornar
+            case NPCController.State.Atacando:
+                if (Vector2.Distance(transform.position, GetComponent<NPCController>().player.position) <= distanciaPerseguir)
+                {
+                    if (GetComponent<NPCController>().life > 50)
+                        return 10; // player está perto e sua vida tá boa, é uma boa atacar
+                    else
+                        return 5; // player está perto e sua vida está na metade, pode ser arriscado atacar, mas o risco de morte ainda não é alto
+                }
+                else // o player está fora de alcance, não tem por que atacar
+                    return 0;
             default:
                 return 0;
         }
     }
 
     // Função para executar a ação escolhida pelo Minimax
-    private void ExecutarAção(int acao)
+    private NPCController.State ExecutarAção(int acao)
     {
         switch (acao)
         {
             case 0:
-                Patrulhar();
-                break;
+                return NPCController.State.Patrulhando;
             case 1:
-                PerseguirJogador();
-                break;
+                return NPCController.State.Perseguindo;
             case 2:
-                RetornarAOPontoDePatrulha();
-                break;
+                return NPCController.State.Atacando;
+            case 3:
+                return NPCController.State.Retornando;
         }
+        return NPCController.State.Patrulhando;
     }
 }

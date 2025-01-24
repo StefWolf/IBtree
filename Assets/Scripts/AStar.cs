@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AStar: MonoBehaviour
 {
     public class Node
     {
-        public Vector2 position;
+        public Vector3 position;
         public float gCost;  // Custo de g
         public float hCost;  // Custo de h (heurística)
         public float fCost => gCost + hCost;  // Função de avaliação f(n) = g(n) + h(n)
         public Node parent;
         public bool isBlocked;
 
-        public Node(Vector2 position, bool isBlocked)
+        public Node(Vector3 position, bool isBlocked)
         {
             this.position = position;
             gCost = Mathf.Infinity;
@@ -23,21 +24,24 @@ public class AStar: MonoBehaviour
         }
     }
 
-    public Vector2Int start = new Vector2Int(0, 0);  // Ponto de início
-    public Vector2Int target = new Vector2Int(5, 5); // Ponto de destino
-
-    private List<Vector2> GetNeighbours(Vector2 nodePosition)
+    private List<Vector3> GetNeighbours(Vector3 nodePosition)
     {
         // Retorna os pontos vizinhos
-        return FindFirstObjectByType<NPCController>().FindNeighboursPoints(nodePosition);
+        return new List<Vector3>
+        {
+            nodePosition + Vector3.forward,
+            nodePosition + Vector3.back,
+            nodePosition + Vector3.left,
+            nodePosition + Vector3.right
+        };
     }
 
-    private float CalculateManhattanDistance(Vector2 a, Vector2 b)
+    private float CalculateManhattanDistance(Vector3 a, Vector3 b)
     {
         return Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y);
     }
 
-    public List<Vector2> AStarAlgorithm(Vector2 start, Vector2 target)
+    public List<Vector3> AStarAlgorithm(Vector3 start, Vector3 target)
     {
         // Lista de nós abertos (a serem avaliados)
         List<Node> openList = new List<Node>();
@@ -61,7 +65,7 @@ public class AStar: MonoBehaviour
             // Se atingirmos o alvo, podemos reconstruir o caminho
             if (currentNode.position == target)
             {
-                List<Vector2> path = new List<Vector2>();
+                List<Vector3> path = new List<Vector3>();
                 while (currentNode != null)
                 {
                     path.Add(currentNode.position);
@@ -76,7 +80,7 @@ public class AStar: MonoBehaviour
             closedList.Add(currentNode); // adiciona ele aos nós já avaliados 
 
             // Verifica os vizinhos
-            foreach (Vector2 neighbourPos in GetNeighbours(currentNode.position))
+            foreach (Vector3 neighbourPos in GetNeighbours(currentNode.position))
             {
                 // add verificação para ver se o vizinho é uma parede ou não (a fazer ainda)
                 Node neighbourNode = new Node(neighbourPos, false);

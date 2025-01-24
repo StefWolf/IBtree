@@ -29,4 +29,12 @@ public class PlayerController : MonoBehaviour
         // Move o jogador usando o Rigidbody2D
         rb.velocity = movement * moveSpeed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<NPCController>().life -= 5;
+        }
+    }
 }

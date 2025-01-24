@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - NPCWander
+  - Enemy
   layers:
   - Default
   - TransparentFX
