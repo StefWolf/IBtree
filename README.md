@@ -26,6 +26,7 @@ Level 2 com Navegação Wander/Seek
 
 # Minimax e A*
 Para a terceira fase do jogo, utilizamos o algoritmo Minimax, utilizado para a tomada de decisões do NPC, associado ao algoritmo A*, utilizado para a escolha do melhor caminho para o destino escolhido com a tomada de decisão.
+
 A Heuristica utilizada no algoritmo A* foi a Distancia de Manhattan:
 ```
 A Distância de Manhattan, também conhecida como distância L1 ou distância de bloco, é uma métrica
